@@ -1,28 +1,21 @@
 .App {
   text-align: center;
-  margin-top: 50px;
-}
-
-.controls {
-  margin-bottom: 20px;
-}
-
-.joke-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.joke {
-  margin: 20px;
+  margin: 10% auto;
+  border: 2px solid blue;
+  width: fit-content;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  max-width: 80%;
+  border-radius: 20px;
 }
-
+h1 {
+  color: #007bff;
+}
+p {
+  margin: auto;
+  width: 300px;
+  height: 120px;
+}
 button {
-  margin-top: 10px;
+  margin-top: 40px;
   padding: 8px 16px;
   background-color: #007bff;
   color: white;

@@ -1,18 +1,25 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
 
 function Main() {
-  const [getData, setData] = useState("");
+  const [getCate, setCate] = useState("");
 
   const fetchData = () => {
-    fetch();
+    Axios.get("https://catfact.ninja/fact").then((resp) => {
+      setCate(resp.data.fact);
+    });
   };
 
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <div>
-      <h1>Jokes</h1>
-      <p></p>
-      <button></button>
+      <h1>Cat Facts</h1>
+      <div>
+        <p>{getCate}</p>
+        <button onClick={fetchData}>Click me </button>
+      </div>
     </div>
   );
 }
